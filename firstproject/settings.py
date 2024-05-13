@@ -18,6 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
 TEMPLATE_DIR = BASE_DIR / "templates"
 # print(TEMPLATE_DIR)
+STATIC_DIR = BASE_DIR / "static"
 
 
 # Quick-start development settings - unsuitable for production
@@ -121,6 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+   STATIC_DIR,
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
